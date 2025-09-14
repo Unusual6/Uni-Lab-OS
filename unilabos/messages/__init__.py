@@ -101,6 +101,10 @@ class CleanProtocol(BaseModel):
     temp: float
     repeats: int = 1
 
+class ElisaProtocol(BaseModel):
+    plate: dict
+    wells: str
+    pbst_cycles: int = 3
 
 class SeparateProtocol(BaseModel):
     purpose: str
@@ -632,7 +636,7 @@ __all__ = [
     "Point3D", "PumpTransferProtocol", "CleanProtocol", "SeparateProtocol", 
     "EvaporateProtocol", "EvacuateAndRefillProtocol", "AGVTransferProtocol", 
     "CentrifugeProtocol", "AddProtocol", "FilterProtocol", 
-    "HeatChillProtocol",
+    "HeatChillProtocol","ElisaProtocol",
     "HeatChillStartProtocol", "HeatChillStopProtocol",
     "StirProtocol", "StartStirProtocol", "StopStirProtocol", 
     "TransferProtocol", "CleanVesselProtocol", "DissolveProtocol", 

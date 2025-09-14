@@ -1,0 +1,236 @@
+{
+  "nodes": [
+    {
+      "id": "ELISA_Workstation",
+      "name": "ELISA 自动化实验平台",
+      "children": [
+        "plate",
+        "washer_405ls",
+        "reader_synergyh1",
+        "robot_arm",
+        "agv",
+        "pump",
+        "reagent_pbst",
+        "reagent_tmb",
+        "reagent_stop"
+      ],
+      "parent": null,
+      "type": "device",
+      "class": "workstation",
+      "position": {"x": 600, "y": 200, "z": 0},
+      "config": {
+        "protocol_type": [
+          "ElisaProtocol"
+        ]
+      },
+      "data": {}
+    },
+    {
+      "id": "plate",
+      "name": "96well_plate",
+      "children": [],
+      "parent": "ELISA_Workstation",
+      "type": "container",
+      "class": "container",
+      "position": {"x": 650, "y": 400, "z": 0},
+      "config": {
+        "max_volume": 350.0,
+        "size_x": 128.0,
+        "size_y": 86.0,
+        "size_z": 15.0
+      },
+      "data": {
+        "liquid": []
+      }
+    },
+    {
+      "id": "washer_405ls",
+      "name": "405 LS 洗板机",
+      "children": [],
+      "parent": "ELISA_Workstation",
+      "type": "device",
+      "class": "washer",
+      "position": {"x": 450, "y": 200, "z": 0},
+      "config": {},
+      "data": {}
+    },
+    {
+      "id": "reader_synergyh1",
+      "name": "Synergy H1 酶标仪",
+      "children": [],
+      "parent": "ELISA_Workstation",
+      "type": "device",
+      "class": "reader",
+      "position": {"x": 800, "y": 200, "z": 0},
+      "config": {},
+      "data": {}
+    },
+    {
+      "id": "robot_arm",
+      "name": "机械臂",
+      "children": [],
+      "parent": "ELISA_Workstation",
+      "type": "device",
+      "class": "robot_arm",
+      "position": {"x": 600, "y": 100, "z": 0},
+      "config": {},
+      "data": {}
+    },
+    {
+      "id": "agv",
+      "name": "AGV小车",
+      "children": [],
+      "parent": "ELISA_Workstation",
+      "type": "device",
+      "class": "AGV",
+      "position": {"x": 600, "y": 50, "z": 0},
+      "config": {},
+      "data": {}
+    },
+    {
+      "id": "pump",
+      "name": "液体处理模块",
+      "children": [],
+      "parent": "ELISA_Workstation",
+      "type": "device",
+      "class": "vacuum_pump.mock",
+      "position": {"x": 600, "y": 300, "z": 0},
+      "config": {},
+      "data": {}
+    },
+    {
+      "id": "reagent_pbst",
+      "name": "PBST 洗液瓶",
+      "children": [],
+      "parent": "ELISA_Workstation",
+      "type": "container",
+      "class": "container",
+      "position": {"x": 400, "y": 300, "z": 0},
+      "config": {
+        "max_volume": 100000.0
+      },
+      "data": {
+        "liquids": [
+          {
+            "liquid_type": "PBST",
+            "liquid_volume": 1000
+          }
+        ]
+      }
+    },
+    {
+      "id": "reagent_tmb",
+      "name": "TMB 显色液瓶",
+      "children": [],
+      "parent": "ELISA_Workstation",
+      "type": "container",
+      "class": "container",
+      "position": {"x": 500, "y": 300, "z": 0},
+      "config": {
+        "max_volume": 50000.0
+      },
+     "data": {
+        "liquids": [
+          {
+            "liquid_type": "TMB",
+            "liquid_volume": 1000
+          }
+        ]
+      }
+    },
+    {
+      "id": "reagent_stop",
+      "name": "Stop 终止液瓶",
+      "children": [],
+      "parent": "ELISA_Workstation",
+      "type": "container",
+      "class": "container",
+      "position": {"x": 700, "y": 300, "z": 0},
+      "config": {
+        "max_volume": 50000.0
+      },
+      "data": {
+        "liquids": [
+          {
+            "liquid_type": "Stop",
+            "liquid_volume": 100000
+          }
+        ]
+      }
+    }
+  ],
+  "links": [
+    {
+      "source": "plate",
+      "target": "washer_405ls",
+      "type": "transfer",
+      "port": {
+        "plate": "dock",
+        "washer_405ls": "in"
+      }
+    },
+    {
+      "source": "plate",
+      "target": "reader_synergyh1",
+      "type": "transfer",
+      "port": {
+        "plate": "dock",
+        "reader_synergyh1": "in"
+      }
+    },
+    {
+      "source": "robot_arm",
+      "target": "plate",
+      "type": "manipulation",
+      "port": {
+        "robot_arm": "gripper",
+        "plate": "top"
+      }
+    },
+    {
+      "source": "agv",
+      "target": "robot_arm",
+      "type": "coordination",
+      "port": {
+        "agv": "dock",
+        "robot_arm": "base"
+      }
+    },
+    {
+      "source": "reagent_pbst",
+      "target": "pump",
+      "type": "fluid",
+      "port": {
+        "reagent_pbst": "out",
+        "pump": "in"
+      }
+    },
+    {
+      "source": "reagent_tmb",
+      "target": "pump",
+      "type": "fluid",
+      "port": {
+        "reagent_tmb": "out",
+        "pump": "in"
+      }
+    },
+    {
+      "source": "reagent_stop",
+      "target": "pump",
+      "type": "fluid",
+      "port": {
+        "reagent_stop": "out",
+        "pump": "in"
+      }
+    },
+    {
+      "source": "pump",
+      "target": "plate",
+      "type": "fluid",
+      "port": {
+        "pump": "out",
+        "plate": "top"
+      }
+    }
+  ]
+}

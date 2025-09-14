@@ -25,11 +25,12 @@ from .reset_handling_protocol import generate_reset_handling_protocol
 from .dry_protocol import generate_dry_protocol
 from .recrystallize_protocol import generate_recrystallize_protocol
 from .hydrogenate_protocol import generate_hydrogenate_protocol
-
+from .elisa_protocol import generate_elisa_protocol
 
 # Define a dictionary of protocol generators.
 action_protocol_generators = {
     AddProtocol: generate_add_protocol,
+    ElisaProtocol: generate_elisa_protocol,
     AGVTransferProtocol: generate_agv_transfer_protocol,
     AdjustPHProtocol: generate_adjust_ph_protocol,
     CentrifugeProtocol: generate_centrifuge_protocol,

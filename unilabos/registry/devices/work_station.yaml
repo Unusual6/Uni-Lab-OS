@@ -103,7 +103,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -117,12 +117,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -139,7 +139,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: from_repo
                   type: object
                 from_repo_position:
                   type: string
@@ -178,7 +178,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -192,12 +192,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -214,7 +214,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: to_repo
                   type: object
                 to_repo_position:
                   type: string
@@ -390,7 +390,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -404,12 +404,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -426,7 +426,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: vessel
                   type: object
                 viscous:
                   type: boolean
@@ -579,7 +579,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -593,12 +593,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -615,7 +615,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: vessel
                   type: object
               required:
               - vessel
@@ -752,7 +752,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -766,12 +766,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -788,7 +788,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: vessel
                   type: object
               required:
               - vessel
@@ -892,7 +892,7 @@ workstation:
                   required:
                   - sec
                   - nanosec
-                  title: Duration
+                  title: time_remaining
                   type: object
                 time_spent:
                   properties:
@@ -907,7 +907,7 @@ workstation:
                   required:
                   - sec
                   - nanosec
-                  title: Duration
+                  title: time_spent
                   type: object
               required:
               - status
@@ -961,7 +961,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -975,12 +975,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -997,7 +997,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: vessel
                   type: object
                 volume:
                   type: number
@@ -1138,7 +1138,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -1152,12 +1152,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -1174,7 +1174,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: vessel
                   type: object
                 volume:
                   type: number
@@ -1345,7 +1345,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -1359,12 +1359,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -1381,7 +1381,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: vessel
                   type: object
                 volume:
                   type: string
@@ -1514,7 +1514,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -1528,12 +1528,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -1550,7 +1550,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: vessel
                   type: object
               required:
               - compound
@@ -1641,7 +1641,7 @@ workstation:
                   required:
                   - sec
                   - nanosec
-                  title: Duration
+                  title: time_remaining
                   type: object
                 time_spent:
                   properties:
@@ -1656,7 +1656,7 @@ workstation:
                   required:
                   - sec
                   - nanosec
-                  title: Duration
+                  title: time_spent
                   type: object
               required:
               - status
@@ -1704,7 +1704,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -1718,12 +1718,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -1740,7 +1740,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: vessel
                   type: object
               required:
               - vessel
@@ -1841,7 +1841,7 @@ workstation:
                   required:
                   - sec
                   - nanosec
-                  title: Duration
+                  title: time_remaining
                   type: object
                 time_spent:
                   properties:
@@ -1856,7 +1856,7 @@ workstation:
                   required:
                   - sec
                   - nanosec
-                  title: Duration
+                  title: time_spent
                   type: object
               required:
               - status
@@ -1912,7 +1912,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -1926,12 +1926,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -1948,7 +1948,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: vessel
                   type: object
               required:
               - vessel
@@ -2117,7 +2117,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -2131,12 +2131,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -2153,7 +2153,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: filtrate_vessel
                   type: object
                 stir:
                   type: boolean
@@ -2196,7 +2196,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -2210,12 +2210,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -2232,7 +2232,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: vessel
                   type: object
                 volume:
                   type: number
@@ -2431,7 +2431,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -2445,12 +2445,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -2467,7 +2467,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: filter_through
                   type: object
                 from_vessel:
                   properties:
@@ -2504,7 +2504,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -2518,12 +2518,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -2540,7 +2540,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: from_vessel
                   type: object
                 residence_time:
                   type: number
@@ -2579,7 +2579,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -2593,12 +2593,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -2615,7 +2615,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: to_vessel
                   type: object
               required:
               - from_vessel
@@ -2771,7 +2771,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -2785,12 +2785,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -2807,7 +2807,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: vessel
                   type: object
               required:
               - vessel
@@ -2938,7 +2938,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -2952,12 +2952,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -2974,7 +2974,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: vessel
                   type: object
               required:
               - vessel
@@ -3087,7 +3087,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -3101,12 +3101,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -3123,7 +3123,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: vessel
                   type: object
               required:
               - vessel
@@ -3245,7 +3245,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -3259,12 +3259,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -3281,7 +3281,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: vessel
                   type: object
               required:
               - temp
@@ -3434,7 +3434,7 @@ workstation:
                   required:
                   - sec
                   - nanosec
-                  title: Duration
+                  title: time_remaining
                   type: object
                 time_spent:
                   properties:
@@ -3449,7 +3449,7 @@ workstation:
                   required:
                   - sec
                   - nanosec
-                  title: Duration
+                  title: time_spent
                   type: object
               required:
               - status
@@ -3501,7 +3501,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -3515,12 +3515,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -3537,7 +3537,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: from_vessel
                   type: object
                 rate_spec:
                   type: string
@@ -3590,7 +3590,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -3604,12 +3604,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -3626,7 +3626,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: to_vessel
                   type: object
                 transfer_flowrate:
                   type: number
@@ -3784,7 +3784,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -3798,12 +3798,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -3820,7 +3820,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: vessel
                   type: object
                 volume:
                   type: string
@@ -3939,7 +3939,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -3953,12 +3953,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -3975,7 +3975,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: vessel
                   type: object
               required:
               - solvent
@@ -4136,7 +4136,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -4150,12 +4150,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -4172,7 +4172,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: from_vessel
                   type: object
                 pct1:
                   type: string
@@ -4221,7 +4221,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -4235,12 +4235,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -4257,7 +4257,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: to_vessel
                   type: object
               required:
               - from_vessel
@@ -4542,7 +4542,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -4556,12 +4556,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -4578,7 +4578,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: from_vessel
                   type: object
                 product_phase:
                   type: string
@@ -4617,7 +4617,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -4631,12 +4631,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -4653,7 +4653,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: product_vessel
                   type: object
                 purpose:
                   type: string
@@ -4696,7 +4696,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -4710,12 +4710,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -4732,7 +4732,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: separation_vessel
                   type: object
                 settling_time:
                   type: number
@@ -4781,7 +4781,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -4795,12 +4795,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -4817,7 +4817,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: to_vessel
                   type: object
                 vessel:
                   properties:
@@ -4854,7 +4854,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -4868,12 +4868,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -4890,7 +4890,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: vessel
                   type: object
                 volume:
                   type: string
@@ -4929,7 +4929,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -4943,12 +4943,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -4965,7 +4965,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: waste_phase_to_vessel
                   type: object
                 waste_vessel:
                   properties:
@@ -5002,7 +5002,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -5016,12 +5016,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -5038,7 +5038,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: waste_vessel
                   type: object
               required:
               - vessel
@@ -5182,7 +5182,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -5196,12 +5196,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -5218,7 +5218,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: vessel
                   type: object
               required:
               - vessel
@@ -5358,7 +5358,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -5372,12 +5372,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -5394,7 +5394,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: vessel
                   type: object
               required:
               - vessel
@@ -5517,7 +5517,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -5531,12 +5531,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -5553,7 +5553,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: vessel
                   type: object
               required:
               - vessel
@@ -5856,7 +5856,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -5870,12 +5870,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -5892,7 +5892,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: filtrate_vessel
                   type: object
                 mass:
                   type: string
@@ -5947,7 +5947,7 @@ workstation:
                           - y
                           - z
                           - w
-                          title: Quaternion
+                          title: orientation
                           type: object
                         position:
                           properties:
@@ -5961,12 +5961,12 @@ workstation:
                           - x
                           - y
                           - z
-                          title: Point
+                          title: position
                           type: object
                       required:
                       - position
                       - orientation
-                      title: Pose
+                      title: pose
                       type: object
                     sample_id:
                       type: string
@@ -5983,7 +5983,7 @@ workstation:
                   - pose
                   - config
                   - data
-                  title: Resource
+                  title: vessel
                   type: object
                 volume:
                   type: string

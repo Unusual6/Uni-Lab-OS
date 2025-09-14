@@ -12,6 +12,17 @@ import yaml
 
 from unilabos.resources.graphio import modify_to_backend_format
 
+# unilab -g test/experiments/elisa.json --app_bridges ""
+
+#  conda activate unilab
+
+# export PYTHONPATH=/home/unusual/Uni-Lab-OS 
+
+# cd unilabos_msgs
+# colcon build
+# source ./install/local_setup.sh
+# cd ..
+
 # 首先添加项目根目录到路径
 current_dir = os.path.dirname(os.path.abspath(__file__))
 unilabos_dir = os.path.dirname(os.path.dirname(current_dir))
@@ -51,7 +62,7 @@ def convert_argv_dashes_to_underscores(args: argparse.ArgumentParser):
 def parse_args():
     """解析命令行参数"""
     parser = argparse.ArgumentParser(description="Start Uni-Lab Edge server.")
-    parser.add_argument("-g", "--graph", help="Physical setup graph.")
+    parser.add_argument("-g", "--graph", default='test/experiments/elisa.json',help="Physical setup graph.")
     # parser.add_argument("-d", "--devices", help="Devices config file.")
     # parser.add_argument("-r", "--resources", help="Resources config file.")
     parser.add_argument("-c", "--controllers", default=None, help="Controllers config file.")
@@ -243,7 +254,7 @@ def main():
     print_unilab_banner(args_dict)
 
     # 注册表
-    build_registry(args_dict["registry_path"], False, args_dict["upload_registry"])
+    build_registry(args_dict["registry_path"], args_dict["upload_registry"])
     if args_dict["graph"] is None:
         request_startup_json = http_client.request_startup_json()
         if not request_startup_json:

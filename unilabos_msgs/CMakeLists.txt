@@ -31,6 +31,7 @@ set(action_files
   "action/AdjustPH.action"
   "action/ResetHandling.action"
   "action/Dry.action"
+  "action/Elisa.action"
   "action/Hydrogenate.action"
   "action/Recrystallize.action"
   "action/CleanVessel.action"

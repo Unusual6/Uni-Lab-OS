@@ -26,7 +26,8 @@ from unilabos.ros.msgs.message_converter import (
 from unilabos.ros.nodes.base_device_node import BaseROS2DeviceNode, DeviceNodeResourceTracker, ROS2DeviceNode
 from unilabos.utils.log import error
 from unilabos.utils.type_check import serialize_result_info
-
+from unilabos.messages import AddProtocol,ElisaProtocol
+print(AddProtocol,ElisaProtocol)
 
 class ROS2ProtocolNode(BaseROS2DeviceNode):
     """
@@ -132,6 +133,7 @@ class ROS2ProtocolNode(BaseROS2DeviceNode):
             self.protocol_names = protocol_type
         # 准备协议相关的动作值映射
         self.protocol_action_mappings = {}
+
         for protocol_name in self.protocol_names:
             protocol_type = globals()[protocol_name]
             self.protocol_action_mappings[protocol_name] = get_action_type(protocol_type)

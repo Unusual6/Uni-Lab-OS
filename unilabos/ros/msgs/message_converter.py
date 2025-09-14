@@ -100,12 +100,15 @@ _action_mapping: Dict[Type, Dict[str, Any]] = {
 
 # 添加Protocol action类型到映射
 for py_msgtype in imsg.__all__:
+    import unilabos_msgs.action
+    print(unilabos_msgs.action.__file__)
     if py_msgtype not in _action_mapping and (py_msgtype.endswith("Protocol") or py_msgtype.startswith("Protocol")):
         try:
             protocol_class = msg_converter_manager.get_class(f"unilabos.messages.{py_msgtype}")
             action_name = py_msgtype.replace("Protocol", "")
             action_type = msg_converter_manager.get_class(f"unilabos_msgs.action.{action_name}")
-
+            from unilabos_msgs.action import Add
+            print(Add)
             if action_type:
                 _action_mapping[protocol_class] = {
                     "type": action_type,
