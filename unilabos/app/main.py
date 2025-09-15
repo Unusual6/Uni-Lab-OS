@@ -23,6 +23,8 @@ from unilabos.resources.graphio import modify_to_backend_format
 # source ./install/local_setup.sh
 # cd ..
 
+# conda install --use-local
+
 # 首先添加项目根目录到路径
 current_dir = os.path.dirname(os.path.abspath(__file__))
 unilabos_dir = os.path.dirname(os.path.dirname(current_dir))
